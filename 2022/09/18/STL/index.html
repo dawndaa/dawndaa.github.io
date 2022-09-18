@@ -10,7 +10,16 @@
   
 
   
+  <meta name="description" content="STL or Algorithm1. memset1void *memset(void *s, int c, size_t n);
 
+​	作用: 按照字节将 指定内存空间 初始化为 指定值
+​	s是该内存空间的起始位置 	n是该内存空间的大小  n代表n字节		c是用来填充的内容 取它的低8位
+​	">
+  
+
+  
+  
+  <meta name="keywords" content="">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -54,68 +63,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2022/09/18/数论/"><span></span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2022/09/18/数论/" rel="bookmark">
-        <time class="entry-date published" datetime="2022-09-18T04:36:23.255Z">
-          2022-09-18
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h4 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h4><p>​	定义: 对于整数a, b, b !&#x3D; 0, 若存在整数c 使得 a &#x3D; b * c, 则称 b 整除 a, 记作 b | a</p>
-<p>​	b | a   则b是a的因数  a是b的倍数</p>
-<h4 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h4><p>​	定义: 整数a的正因数只有1和a的绝对值，则称a是素数，否则称为合数</p>
-<p>​	埃氏筛 O(n * log(log(n)))</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// int n, 求1~n间的所有素数</span><br><span class="line">bool isprime[n + 1];</span><br><span class="line">memset(check, n, sizeof(check));</span><br><span class="line">check[0] = check[1] = true;</span><br><span class="line">void fillprime(int n) &#123;</span><br><span class="line">	for (int i = 2; i &lt;= n / i; ++i) </span><br><span class="line">		if (!check[i]) </span><br><span class="line">			for (int j = i; j &lt;= reg / i; ++j)</span><br><span class="line">				check[i * j] = true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="最大公因数"><a href="#最大公因数" class="headerlink" title="最大公因数"></a>最大公因数</h4><p>​	辗转相除法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll gcd (ll a, ll b) &#123;return b ? gcd(b, a % b) : a;&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll lcm(lla, ll b) &#123;return a / gcd(a, b) * b;&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2022/09/18/STL/"><span></span></a></h3>
+    <h3 class="article-title"><span></span></h3>
     
   
 
@@ -246,140 +198,16 @@
   </div>
 </article>
 
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2022/09/18/cast/"><span></span></a></h3>
-    
   
 
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2022/09/18/cast/" rel="bookmark">
-        <time class="entry-date published" datetime="2022-09-18T04:36:23.250Z">
-          2022-09-18
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <table>
-<thead>
-<tr>
-<th align="center">static_cast</th>
-<th align="center">支持任何不包含底层const的类型转化</th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">dynamic_cast</td>
-<td align="center">支持运行时类型识别</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">const_cast</td>
-<td align="center">尽支持改变对象的底层const 不能改变类型</td>
-<td align="center">const char* pc; char* p &#x3D; const_cast&lt;char*&gt; (pc);</td>
-</tr>
-<tr>
-<td align="center">reinterpret_cast</td>
-<td align="center">为对象的位模式提供较低层次上的重新解释</td>
-<td align="center">int *ip; char * pc &#x3D; reinterpret_cast&lt;char*&gt; (ip);</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2022/09/18/basic_knowledge/"><span></span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2022/09/18/basic_knowledge/" rel="bookmark">
-        <time class="entry-date published" datetime="2022-09-18T04:36:23.248Z">
-          2022-09-18
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h4 id="原码-反码-补码"><a href="#原码-反码-补码" class="headerlink" title="原码 反码 补码"></a>原码 反码 补码</h4><ol>
-<li><p>正数的原码 反码 补码 都等于它本身</p>
-</li>
-<li><p>负数的补码  等于 原码 除符号位取反再加一</p>
-<p>例子: 比如-1 的原码是1000·····1  	</p>
-<p>取反得到1111···110	再加一得到 1111111·····11  </p>
-<p>其中最高位的0&#x2F;1是符号位  0代表正数 1代表负数</p>
-</li>
-<li><p>负数的补码   取反后再加一   可以得到它的绝对值</p>
-<p>例子: 比如-1  的补码是1111······111</p>
-<p>取反得到 0000·····000   再加一得到0000····0001  即为1</p>
-</li>
-</ol>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
 
 
 
 
-<nav class="pagination">
-  
-  
-</nav>
+
+
+
+
     </main>
 
     <footer class="site-footer">
