@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dawndaa.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"dawndaa.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Dawn">
@@ -159,6 +159,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/cast/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Semon">
+      <meta itemprop="description" content="Dawn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="廖小晓的Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/18/cast/" class="post-title-link" itemprop="url">c++强制类型转换</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：16:45:35" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c-primer/" itemprop="url" rel="index"><span itemprop="name">c++_primer</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table>
+<thead>
+<tr>
+<th align="center">static_cast</th>
+<th align="center">支持任何不包含底层const的类型转化</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">dynamic_cast</td>
+<td align="center">支持运行时类型识别</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">const_cast</td>
+<td align="center">尽支持改变对象的底层const 不能改变类型</td>
+<td align="center">const char* pc; char* p &#x3D; const_cast&lt;char*&gt; (pc);</td>
+</tr>
+<tr>
+<td align="center">reinterpret_cast</td>
+<td align="center">为对象的位模式提供较低层次上的重新解释</td>
+<td align="center">int *ip; char * pc &#x3D; reinterpret_cast&lt;char*&gt; (ip);</td>
+</tr>
+</tbody></table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/18/cast/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/basic_knowledge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,84 +312,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/18/basic_knowledge/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Semon">
-      <meta itemprop="description" content="Dawn">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="廖小晓的Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="1-memset"><a href="#1-memset" class="headerlink" title="1. memset"></a>1. memset</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">memset</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>s<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">,</span> size_t n<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>作用: 按照字节将 指定内存空间 初始化为 指定值</p>
-<p>s是该内存空间的起始位置 	n是该内存空间的大小  n代表n字节		c是用来填充的内容 取它的低8位</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -394,7 +414,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/cast/">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -408,7 +428,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/18/cast/" class="post-title-link" itemprop="url">c++强制类型转换</a>
+            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
         </h2>
 
         <div class="post-meta">
@@ -419,7 +439,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：16:45:35" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -427,7 +447,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/c-primer/" itemprop="url" rel="index"><span itemprop="name">c++_primer</span></a>
+                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
                 </span>
             </span>
 
@@ -442,33 +462,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
-<thead>
-<tr>
-<th align="center">static_cast</th>
-<th align="center">支持任何不包含底层const的类型转化</th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">dynamic_cast</td>
-<td align="center">支持运行时类型识别</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">const_cast</td>
-<td align="center">尽支持改变对象的底层const 不能改变类型</td>
-<td align="center">const char* pc; char* p &#x3D; const_cast&lt;char*&gt; (pc);</td>
-</tr>
-<tr>
-<td align="center">reinterpret_cast</td>
-<td align="center">为对象的位模式提供较低层次上的重新解释</td>
-<td align="center">int *ip; char * pc &#x3D; reinterpret_cast&lt;char*&gt; (ip);</td>
-</tr>
-</tbody></table>
+          <h4 id="1-memset"><a href="#1-memset" class="headerlink" title="1. memset"></a>1. memset</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">memset</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>s<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">,</span> size_t n<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>作用: 按照字节将 指定内存空间 初始化为 指定值</p>
+<p>s是该内存空间的起始位置 	n是该内存空间的大小  n代表n字节		c是用来填充的内容 取它的低8位</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/18/cast/#more" rel="contents">
+              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -730,6 +730,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dawndaa" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dawndaa" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:semondawn9@gmail.com" title="E-Mail → mailto:semondawn9@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
 
 
 
