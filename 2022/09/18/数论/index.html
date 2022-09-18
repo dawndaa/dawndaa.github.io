@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Dawn&#39;s Blog | keep running</title>
+  <title>小廖的Blog | 欢迎你来看我昂</title>
 
   
   <meta name="author" content="Semon">
@@ -24,14 +24,14 @@
 
   
 
-  <meta property="og:site_name" content="Dawn&#39;s Blog"/>
+  <meta property="og:site_name" content="小廖的Blog"/>
 
   
   <meta property="og:image" content="/favicon.ico"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Dawn&#39;s Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="小廖的Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -43,9 +43,9 @@
     <header>
   <div class="site-branding">
     <h1 class="site-title">
-      <a href="/">Dawn&#39;s Blog</a>
+      <a href="/">小廖的Blog</a>
     </h1>
-    <p class="site-description">keep running</p>
+    <p class="site-description">欢迎你来看我昂</p>
   </div>
   <nav class="site-navigation">
     <ul>
@@ -87,12 +87,21 @@
 <p>​	b | a   则b是a的因数  a是b的倍数</p>
 <h4 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h4><p>​	定义: 整数a的正因数只有1和a的绝对值，则称a是素数，否则称为合数</p>
 <p>​	埃氏筛 O(n * log(log(n)))</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// int n, 求1~n间的所有素数</span><br><span class="line">bool isprime[n + 1];</span><br><span class="line">memset(check, n, sizeof(check));</span><br><span class="line">check[0] = check[1] = true;</span><br><span class="line">void fillprime(int n) &#123;</span><br><span class="line">	for (int i = 2; i &lt;= n / i; ++i) </span><br><span class="line">		if (!check[i]) </span><br><span class="line">			for (int j = i; j &lt;= reg / i; ++j)</span><br><span class="line">				check[i * j] = true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; int n, 求1~n间的所有素数
+bool isprime[n + 1];
+memset(check, n, sizeof(check));
+check[0] &#x3D; check[1] &#x3D; true;
+void fillprime(int n) &#123;
+	for (int i &#x3D; 2; i &lt;&#x3D; n &#x2F; i; ++i) 
+		if (!check[i]) 
+			for (int j &#x3D; i; j &lt;&#x3D; reg &#x2F; i; ++j)
+				check[i * j] &#x3D; true;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="最大公因数"><a href="#最大公因数" class="headerlink" title="最大公因数"></a>最大公因数</h4><p>​	辗转相除法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll gcd (ll a, ll b) &#123;return b ? gcd(b, a % b) : a;&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">ll gcd (ll a, ll b) &#123;return b ? gcd(b, a % b) : a;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll lcm(lla, ll b) &#123;return a / gcd(a, b) * b;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h4><pre class="line-numbers language-none"><code class="language-none">ll lcm(lla, ll b) &#123;return a &#x2F; gcd(a, b) * b;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
       
