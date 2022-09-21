@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dawndaa.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"dawndaa.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="1.并查集 ​ 用于管理元素分组，支持合并两个分组，以及查询两个元素是否在同一分组  ​ 主要操作  unite(); &#x2F;&#x2F; 合并 find(); &#x2F;&#x2F; 查找根节点 same(); &#x2F;&#x2F; 判断是否在同一个组  init(); &#x2F;&#x2F; 初始化数组  ​通过路径压缩 以及 按秩合并 可以大大降低时间复杂度  vector pre, rk; void init(int n) { 	pre.assign(n">
@@ -477,13 +477,10 @@ nodes<span class="token punctuation">.</span><span class="token function">insert
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/09/18/%E6%95%B0%E8%AE%BA/" rel="prev" title="数论">
-      <i class="fa fa-chevron-left"></i> 数论
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/09/18/memset/" rel="next" title="库函数--memset">
-      库函数--memset <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/18/%E6%95%B0%E8%AE%BA/" rel="next" title="数论">
+      数论 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -557,7 +554,7 @@ nodes<span class="token punctuation">.</span><span class="token function">insert
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -669,5 +666,8 @@ nodes<span class="token punctuation">.</span><span class="token function">insert
 
   
 
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/clipboard-use.js"></script>
 </body>
 </html>
