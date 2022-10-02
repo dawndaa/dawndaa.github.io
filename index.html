@@ -334,6 +334,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Semon">
+      <meta itemprop="description" content="Dawn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="廖小晓的Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
+                </span>
+            </span>
+
+          
+          <span title="post.wordcount">
+         182 字
+          </span>
+
+     </span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          1. memset
+void *memset(void *s, int c, size_t n);
+
+作用: 按照字节将 指定内存空间 初始化为 指定值
+
+s是该内存空间的起始位置 n是该内存空间的大小 n代表n字节 c是用来填充的内容 取它的低8位
+
+示例: 
+
+//字符数组
+char a[4];
+memset(a, '1', sizeof(a)); // '1'只有八位  这条语句把a的每个元素都初始化为'1'
+
+//整数数组
+int a[4];
+memset(a, -1, sizeof(a)); 
+// -1按照补码表示为 111·····111 这条语句把a的每个元素都初始化为-1
+
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/heap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -425,7 +522,7 @@ p
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/%E6%95%B0%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -439,7 +536,7 @@ p
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
+            <a href="/2022/09/18/%E6%95%B0%E8%AE%BA/" class="post-title-link" itemprop="url">数论</a>
         </h2>
 
         <div class="post-meta">
@@ -450,7 +547,7 @@ p
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:03:08" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -458,13 +555,13 @@ p
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
+                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
                 </span>
             </span>
 
           
           <span title="post.wordcount">
-         182 字
+         197 字
           </span>
 
      </span>
@@ -477,28 +574,25 @@ p
     <div class="post-body" itemprop="articleBody">
 
       
-          1. memset
-void *memset(void *s, int c, size_t n);
+          整除
+​ 定义: 对于整数a, b, b != 0, 若存在整数c 使得 a = b * c, 则称 b 整除 a, 记作 b | a
 
-作用: 按照字节将 指定内存空间 初始化为 指定值
+​ b | a 则b是a的因数 a是b的倍数 
 
-s是该内存空间的起始位置 n是该内存空间的大小 n代表n字节 c是用来填充的内容 取它的低8位
+素数
+​ 定义: 整数a的正因数只有1和a的绝对值，则称a是素数，否则称为合数
 
-示例: 
+​ 埃氏筛 O(n * log(log(n)))
 
-//字符数组
-char a[4];
-memset(a, '1', sizeof(a)); // '1'只有八位  这条语句把a的每个元素都初始化为'1'
-
-//整数数组
-int a[4];
-memset(a, -1, sizeof(a)); 
-// -1按照补码表示为 111·····111 这条语句把a的每个元素都初始化为-1
-
-
+// int n, 求1~n间的所有素数
+bool isprime[n + 1];
+memset(check, n, sizeof(check));
+check[0] = check[1] = true;
+void fillprime(int n) {
+	for (int i 
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
+              <a class="btn" href="/2022/09/18/%E6%95%B0%E8%AE%BA/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -597,100 +691,6 @@ int
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/18/%E5%9B%BE%E8%AE%BA/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/%E6%95%B0%E8%AE%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Semon">
-      <meta itemprop="description" content="Dawn">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="廖小晓的Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/18/%E6%95%B0%E8%AE%BA/" class="post-title-link" itemprop="url">数论</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:03:08" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
-                </span>
-            </span>
-
-          
-          <span title="post.wordcount">
-         197 字
-          </span>
-
-     </span>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          整除
-​ 定义: 对于整数a, b, b != 0, 若存在整数c 使得 a = b * c, 则称 b 整除 a, 记作 b | a
-
-​ b | a 则b是a的因数 a是b的倍数 
-
-素数
-​ 定义: 整数a的正因数只有1和a的绝对值，则称a是素数，否则称为合数
-
-​ 埃氏筛 O(n * log(log(n)))
-
-// int n, 求1~n间的所有素数
-bool isprime[n + 1];
-memset(check, n, sizeof(check));
-check[0] = check[1] = true;
-void fillprime(int n) {
-	for (int i 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/09/18/%E6%95%B0%E8%AE%BA/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
