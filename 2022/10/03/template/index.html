@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"dawndaa.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Dawn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://dawndaa.top/tags/index.html">
+  <meta name="description" content="函数模板 template  [constexpr&#x2F;inline] &#x2F;&#x2F; []表示可选 可以将该函数声明为内联函数 或者常量表达式 int compare(const T&amp; v1, const T&amp; v2) {     if (v1 &lt; v2) return -1;     if (v2 &lt; v1) return 1;     return 0; }   1. 模板定义 以template关键字开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="template">
+<meta property="og:url" content="http://dawndaa.top/2022/10/03/template/index.html">
 <meta property="og:site_name" content="廖小晓的Blog">
-<meta property="og:description" content="Dawn">
+<meta property="og:description" content="函数模板 template  [constexpr&#x2F;inline] &#x2F;&#x2F; []表示可选 可以将该函数声明为内联函数 或者常量表达式 int compare(const T&amp; v1, const T&amp; v2) {     if (v1 &lt; v2) return -1;     if (v2 &lt; v1) return 1;     return 0; }   1. 模板定义 以template关键字开">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-09-18T07:37:01.000Z">
-<meta property="article:modified_time" content="2022-09-18T07:50:52.721Z">
+<meta property="article:published_time" content="2022-10-03T06:49:10.000Z">
+<meta property="article:modified_time" content="2022-10-03T13:39:55.469Z">
 <meta property="article:author" content="Semon">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://dawndaa.top/tags/">
+<link rel="canonical" href="http://dawndaa.top/2022/10/03/template/">
 
 
 <script id="page-configurations">
@@ -40,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>标签 | 廖小晓的Blog
-</title>
+  <title>template | 廖小晓的Blog</title>
   
 
 
@@ -155,51 +155,170 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-Hans">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/10/03/template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Semon">
+      <meta itemprop="description" content="Dawn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="廖小晓的Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          template
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2022-10-03 14:49:10 / 修改时间：21:39:55" itemprop="dateCreated datePublished" datetime="2022-10-03T14:49:10+08:00">2022-10-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c-primer/" itemprop="url" rel="index"><span itemprop="name">c++_primer</span></a>
+                </span>
+            </span>
+
+          
+          <span title="post.wordcount">
+         587 字
+          </span>
+
+     </span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename T&gt; [constexpr&#x2F;inline] &#x2F;&#x2F; []表示可选 可以将该函数声明为内联函数 或者常量表达式
+int compare(const T&amp; v1, const T&amp; v2) &#123;
+    if (v1 &lt; v2) return -1;
+    if (v2 &lt; v1) return 1;
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span id="more"></span>
+
+<ol>
+<li>模板定义 以template关键字开始</li>
+<li>&lt; &gt;是模板参数列表，参数分为类型参数和非类型参数，其中类型参数前使用关键字typename 或 class, 非类型参数前则使用特定的类型名</li>
+<li>实例化: 仅在实例化时，编译器才会通过给定参数生成代码   在实例化时， 编译器通过具体给出的实参来推断形参的类型或者是值。在实例化时，<strong>非类型参数对应的实参必须是常量表达式</strong></li>
+<li>原则: 函数参数都是const的引用  函数体内条件判断只是用&lt;</li>
+<li>头文件: 模板的头文件通常既包括声明 也包括定义</li>
+</ol>
+<h4 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;template_parameter_list&gt; 
+class class_name &#123;
+	ret_type function_name(parameters) &#123; &#125;
+&#125;;
+template &lt;template_parameter_list&gt; 
+ret_type class_name&lt;template_parameter_list&gt;::function_name(parameters) &#123;
+    
+&#125;
+&#x2F;&#x2F; eg:
+template &lt;typename T&gt; 
+class Blob &#123;
+public:
+    T&amp; back();
+
+private:    
+    std::shared_ptr&lt;std::vector&lt;T&gt;&gt; data;
+&#125;;
+template &lt;typename T&gt;
+T&amp; Blob&lt;T&gt;::back() &#123;
+    return data-&gt;back();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol>
+<li><p>友元声明</p>
+<ol>
+<li><p>将相同类型实例化的类声明为友元</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename&gt; class BlobPtr;
+template &lt;typename T&gt; class Blob &#123;
+    friend class BlobPtr&lt;T&gt;; 
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>将类的所有实例都声明为本类的每个实例的友元</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename T&gt; class C2 &#123;
+	&#x2F;&#x2F; 对于C2的每一个实例来说 Pal2的每一个实例都是他的友元
+	template &lt;typename X&gt; friend class Pal2;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>将类声明为本类的每个实例的友元</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename T&gt; class C2 &#123;
+    &#x2F;&#x2F; 对于C2的每一个实例来说Pal3都是他的友元
+	firend class Pal3;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+</li>
+<li><p>类型别名</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename T&gt; using twin &#x3D; pair&lt;T, T&gt;
+twin&lt;int&gt; win_loss; &#x2F;&#x2F; pair&lt;int, int&gt;
+twin&lt;string&gt; partNo; &#x2F;&#x2F; pair&lt;string, string&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>static成员</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">template &lt;typename T&gt; class Foo &#123;
+private:
+    &#x2F;&#x2F; 所有的Foo&lt;X&gt;共享相同的ctr Foo&lt;T&gt;与Foo&lt;X&gt;的ctr不同
+    static std::size_t ctr;
+    &#x2F;&#x2F; 上述ctr也可以定义成以下形式
+    template &lt;typename T&gt;
+    size_t Foo&lt;T&gt;::btr &#x3D; 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># c++</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/09/18/basic_knowledge/" rel="prev" title="基础知识">
+      <i class="fa fa-chevron-left"></i> 基础知识
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 6 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/c/" style="font-size: 30px; color: #111">c++</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12px; color: #ccc">基础知识</a> <a href="/tags/%E5%AE%B9%E5%99%A8%E9%80%82%E9%85%8D%E5%99%A8/" style="font-size: 12px; color: #ccc">容器适配器</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 21px; color: #6f6f6f">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 12px; color: #ccc">数论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 21px; color: #6f6f6f">算法</a>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -250,6 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.</span> <span class="nav-text">函数模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E6%A8%A1%E6%9D%BF"><span class="nav-number">2.</span> <span class="nav-text">类模板</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

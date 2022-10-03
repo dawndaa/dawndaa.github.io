@@ -159,7 +159,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/cast/">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/10/03/template/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -173,7 +173,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/18/cast/" class="post-title-link" itemprop="url">c++强制类型转换</a>
+            <a href="/2022/10/03/template/" class="post-title-link" itemprop="url">template</a>
         </h2>
 
         <div class="post-meta">
@@ -184,7 +184,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：16:45:35" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+              <time title="创建时间：2022-10-03 14:49:10 / 修改时间：21:39:55" itemprop="dateCreated datePublished" datetime="2022-10-03T14:49:10+08:00">2022-10-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,7 +198,7 @@
 
           
           <span title="post.wordcount">
-         85 字
+         587 字
           </span>
 
      </span>
@@ -211,10 +211,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          static_cast支持任何不包含底层const的类型转化dynamic_cast支持运行时类型识别const_cast尽支持改变对象的底层const 不能改变类型const char* pc; char* p = const_cast<char*> (pc);reinterpret_cast为对象的位模式提供较低层次上的重新解释int *ip; char * pc = reinterpret_cast<char*> (ip);
+          函数模板
+template <typename T> [constexpr/inline] // []表示可选 可以将该函数声明为内联函数 或者常量表达式
+int compare(const T& v1, const T& v2) {
+    if (v1 < v2) return -1;
+    if (v2 < v1) return 1;
+    return 0;
+}
+
+ 1. 模板定义 以template关键字开始
+ 2. < >是模板参数列表，参数分为类型参数和非类型参数，其中类型参数前使用关键字typename 或 class, 非类型参数前则使用特定的类型名
+ 3. 实例化: 仅
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/18/cast/#more" rel="contents">
+              <a class="btn" href="/2022/10/03/template/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -334,7 +344,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/cast/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -348,7 +358,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
+            <a href="/2022/09/18/cast/" class="post-title-link" itemprop="url">c++强制类型转换</a>
         </h2>
 
         <div class="post-meta">
@@ -359,7 +369,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：16:45:35" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -367,13 +377,13 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
+                  <a href="/categories/c-primer/" itemprop="url" rel="index"><span itemprop="name">c++_primer</span></a>
                 </span>
             </span>
 
           
           <span title="post.wordcount">
-         182 字
+         85 字
           </span>
 
      </span>
@@ -386,28 +396,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          1. memset
-void *memset(void *s, int c, size_t n);
-
-作用: 按照字节将 指定内存空间 初始化为 指定值
-
-s是该内存空间的起始位置 n是该内存空间的大小 n代表n字节 c是用来填充的内容 取它的低8位
-
-示例: 
-
-//字符数组
-char a[4];
-memset(a, '1', sizeof(a)); // '1'只有八位  这条语句把a的每个元素都初始化为'1'
-
-//整数数组
-int a[4];
-memset(a, -1, sizeof(a)); 
-// -1按照补码表示为 111·····111 这条语句把a的每个元素都初始化为-1
-
-
+          static_cast支持任何不包含底层const的类型转化dynamic_cast支持运行时类型识别const_cast尽支持改变对象的底层const 不能改变类型const char* pc; char* p = const_cast<char*> (pc);reinterpret_cast为对象的位模式提供较低层次上的重新解释int *ip; char * pc = reinterpret_cast<char*> (ip);
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
+              <a class="btn" href="/2022/09/18/cast/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -499,6 +491,103 @@ p
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/18/heap/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://dawndaa.top/2022/09/18/memset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Semon">
+      <meta itemprop="description" content="Dawn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="廖小晓的Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/18/memset/" class="post-title-link" itemprop="url">库函数--memset</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-18 00:00:00 / 修改时间：17:04:47" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">2022-09-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BA%93%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">库函数</span></a>
+                </span>
+            </span>
+
+          
+          <span title="post.wordcount">
+         182 字
+          </span>
+
+     </span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          1. memset
+void *memset(void *s, int c, size_t n);
+
+作用: 按照字节将 指定内存空间 初始化为 指定值
+
+s是该内存空间的起始位置 n是该内存空间的大小 n代表n字节 c是用来填充的内容 取它的低8位
+
+示例: 
+
+//字符数组
+char a[4];
+memset(a, '1', sizeof(a)); // '1'只有八位  这条语句把a的每个元素都初始化为'1'
+
+//整数数组
+int a[4];
+memset(a, -1, sizeof(a)); 
+// -1按照补码表示为 111·····111 这条语句把a的每个元素都初始化为-1
+
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/18/memset/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -776,7 +865,7 @@ int
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
